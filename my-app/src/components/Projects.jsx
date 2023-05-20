@@ -1,33 +1,80 @@
-import { Box } from "@mui/material";
-import React from "react";
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import React, { useState, memo } from "react";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
-const Projects = () => {
+const Projects = ({ name, path, imageSrc, description }) => {
+  const [isCardHovered, setIsCardHovered] = useState(false);
+  const isMobileScreens = useMediaQuery("(max-width: 480px)");
+  const isTabletScreens = useMediaQuery("(max-width: 992px)");
+
   return (
-    <Box sx={{ mt: "9rem", ml: "1.5rem" }}>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime sapiente
-      dicta ullam, vel commodi magnam exercitationem? Rerum nulla veritatis
-      quibusdam? Nesciunt eveniet officia quis atque facere saepe recusandae
-      totam dolore sit? Culpa quos autem eum dolorum. Fugit, pariatur aperiam.
-      Eligendi, delectus? Qui incidunt eius ipsam, eos molestiae aliquid eaque
-      earum obcaecati! Laudantium placeat provident, laboriosam eum totam
-      mollitia modi molestiae, saepe, earum nesciunt doloremque iste quasi at?
-      Provident aspernatur, ipsum asperiores quibusdam corrupti odio labore
-      deserunt minima ab adipisci. Mollitia facere eum et, ad voluptas voluptate
-      quia perspiciatis, aperiam, necessitatibus nesciunt enim. Numquam,
-      inventore dolore corrupti voluptatibus deleniti nihil. Ea, assumenda
-      facere adipisci suscipit non quisquam voluptates numquam, nostrum
-      reprehenderit praesentium vero. Neque quae tenetur autem porro in earum ex
-      repellat consectetur a, assumenda qui aspernatur perspiciatis soluta animi
-      laborum maiores dolore iste adipisci facere aperiam blanditiis obcaecati
-      officiis eveniet quis. Cum facilis a voluptatem minima quibusdam ut
-      placeat numquam, non possimus, expedita quae aliquam corrupti temporibus
-      cumque, nesciunt fugit doloremque laudantium nisi eius sapiente iusto.
-      Eaque ab, ad et non consequatur facere doloremque qui facilis in mollitia
-      nemo praesentium nesciunt similique esse sequi pariatur temporibus labore.
-      Itaque, assumenda pariatur blanditiis architecto, ducimus quod laboriosam
-      dolorum non, accusantium optio eos.
+    <Box
+      onClick={() => (window.location.href = `${path}`)}
+      onMouseEnter={() => setIsCardHovered(true)}
+      onMouseLeave={() => setIsCardHovered(false)}
+      sx={{
+        mb: "1rem",
+        display: "flex",
+        gap: "1rem",
+        borderRadius: "6px",
+        p: isTabletScreens ? "1.2rem 0" : "1.2rem",
+        cursor: "pointer",
+        backgroundColor: isCardHovered && "rgba(94, 234, 212, 3%)",
+      }}
+    >
+      <Box sx={{ width: "25%" }}>
+        <Box
+          sx={{
+            background: `url(${imageSrc})`,
+            width: "100%",
+            height: "5rem",
+            backgroundSize: "cover",
+            borderRadius: "2px",
+          }}
+        ></Box>
+      </Box>
+      <Box sx={{ width: "calc(75% - 1rem)" }}>
+        <Box>
+          <Box sx={{ display: "flex", gap: "0.5rem" }}>
+            <Typography
+              sx={{
+                fontSize: "1rem",
+                fontWeight: "600",
+                fontFamily: "inherit",
+                color: "white",
+                mb: "0.3rem",
+                color: isCardHovered ? "rgb(94, 234, 212)" : "white",
+              }}
+            >
+              {name}
+            </Typography>
+            <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+              <ArrowOutwardIcon
+                style={{
+                  color: isCardHovered ? "rgb(94, 234, 212)" : "white",
+                  translate: isCardHovered && "5px -5px",
+                  fontSize: "0.9rem",
+                  marginBottom: "5px",
+                }}
+              />
+            </Box>
+          </Box>
+          <Typography
+            sx={{
+              color: "rgb(148, 163, 184)",
+              fontSize: "0.9rem",
+              lineHeight: "1.625rem",
+              mt: "0.5rem",
+              fontFamily: "inherit",
+              textAlign: isTabletScreens ? "justify" : "",
+            }}
+          >
+            {description}
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 };
 
-export default Projects;
+export default memo(Projects);
