@@ -7,7 +7,6 @@ const Experience = () => {
   const [isCardHovered, setIsCardHovered] = useState(false);
   const [isResumeButtonHovered, setIsResumeButtonHovered] = useState(false);
 
-  const isMobileScreens = useMediaQuery("(max-width: 480px)");
   const isTabletScreens = useMediaQuery("(max-width: 992px)");
   return (
     <>
@@ -43,7 +42,6 @@ const Experience = () => {
               fontSize: "1rem",
               fontWeight: "600",
               fontFamily: "inherit",
-              color: "white",
               mb: "0.3rem",
               color: isCardHovered ? "rgb(94, 234, 212)" : "white",
             }}
@@ -85,7 +83,7 @@ const Experience = () => {
         onMouseLeave={() => setIsResumeButtonHovered(false)}
         onClick={() =>
           (window.location.href =
-            "https://drive.google.com/file/d/13TFcK83nnAIuk3qrYBj-9l9KgPhX2YBN/view?usp=sharing")
+            "https://drive.google.com/drive/folders/1xAy9EBldS_eu8VSe0SboSPgPYKlsTDmV?usp=share_link")
         }
         sx={{
           display: "flex",

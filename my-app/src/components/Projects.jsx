@@ -4,7 +4,6 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const Projects = ({ name, path, imageSrc, description }) => {
   const [isCardHovered, setIsCardHovered] = useState(false);
-  const isMobileScreens = useMediaQuery("(max-width: 480px)");
   const isTabletScreens = useMediaQuery("(max-width: 992px)");
 
   return (
@@ -41,7 +40,6 @@ const Projects = ({ name, path, imageSrc, description }) => {
                 fontSize: "1rem",
                 fontWeight: "600",
                 fontFamily: "inherit",
-                color: "white",
                 mb: "0.3rem",
                 color: isCardHovered ? "rgb(94, 234, 212)" : "white",
               }}
