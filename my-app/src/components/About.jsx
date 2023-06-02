@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const About = () => {
-  const isMobileScreens = useMediaQuery("(max-width: 480px)");
   const isTabletScreens = useMediaQuery("(max-width: 992px)");
   return (
     <Box>
