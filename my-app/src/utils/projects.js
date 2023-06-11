@@ -7,6 +7,13 @@ const projects = [
     imageSrc: require("../assets/amazonss.png"),
   },
   {
+    name: `User Aadmin Dashboard`,
+    path: "https://unrivaled-concha-8a5d07.netlify.app/",
+    description:
+      "Developed a user admin dashboard frontend application using React.js, Material-UI, Styled Components, and Redux Toolkit. Implemented features such as pagination, selecting multiple users, user search, and deleting multiple users. Utilized Material-UI components for an intuitive and visually appealing user interface. Leveraged Redux Toolkit and Redux Thunk middleware for efficient state management and integration with backend APIs to ensure seamless user data management.",
+    imageSrc: require("../assets/admin.png"),
+  },
+  {
     name: `Netflix clone`,
     path: "https://animated-strudel-7334a5.netlify.app/",
     description:
