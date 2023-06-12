@@ -26,7 +26,7 @@ const Homepage = () => {
   return (
     <Box
       sx={{
-        width: "80%",
+        width: "87%",
         display: isTabletScreens ? "block" : "flex",
         height: "100vh",
         position: "relative",
