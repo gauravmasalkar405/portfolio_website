@@ -1,10 +1,10 @@
 const projects = [
   {
-    name: `Ecommerce - frontend application`,
-    path: "https://stupendous-torte-718d79.netlify.app/",
+    name: `Ecommerce store - Full stack`,
+    path: "https://papaya-flan-71f350.netlify.app",
     description:
-      "Successfully created a fully functional e-commerce frontend application that offers users an intuitive and seamless shopping experience. The application provides features such as product filtering, search functionality, cart management, and quantity adjustments. The integration of Redux Toolkit and Material UI ensures efficient state management and a visually pleasing user interface. This project showcases strong skills in frontend development using React.js, Redux Toolkit, and Material UI, as well as expertise in API integration and user experience design. It demonstrates the ability to deliver a polished and feature-rich application that meets user requirements.",
-    imageSrc: require("../assets/amazonss.png"),
+      "Developed a full-stack e-commerce application with a feature-rich shopping cart, product reviews and ratings, top products carousel, and user profile with order history. Implemented robust admin functionalities, empowering administrators with seamless product and user management capabilities. This includes an order management system with an interactive order details page and an option to mark orders as delivered, streamlining the order fulfillment process. Implemented a secure user authentication and authorization system, ensuring only authorized users can access protected features and perform actions. Seamless checkout process with shipping and payment method selection, integrated with PayPal and credit card payment systems.Utilized database seeder to populate the application with sample products and users, enhancing testing and demonstration capabilities.",
+    imageSrc: require("../assets/ecommerce_full_stack.png"),
   },
   {
     name: `User Aadmin Dashboard`,
@@ -26,6 +26,13 @@ const projects = [
     description:
       " Real-time chat application using HTML5, CSS3, styled components, and ReactJS. Utilizes socket.io library for real-time messaging and MongoDB database for storing user messages and credentialas. Highly responsive and mobile-friendly, ensuring seamless user experience on all devices.",
     imageSrc: require("../assets/chatster.png"),
+  },
+  {
+    name: `Ecommerce - frontend application`,
+    path: "https://stupendous-torte-718d79.netlify.app/",
+    description:
+      "Successfully created a fully functional e-commerce frontend application that offers users an intuitive and seamless shopping experience. The application provides features such as product filtering, search functionality, cart management, and quantity adjustments. The integration of Redux Toolkit and Material UI ensures efficient state management and a visually pleasing user interface. This project showcases strong skills in frontend development using React.js, Redux Toolkit, and Material UI, as well as expertise in API integration and user experience design. It demonstrates the ability to deliver a polished and feature-rich application that meets user requirements.",
+    imageSrc: require("../assets/amazonss.png"),
   },
   {
     name: `"SocialCircle" - social media app`,
